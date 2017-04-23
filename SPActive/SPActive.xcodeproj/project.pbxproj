@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4EC543221EAD2FE300B03BE2 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC543211EAD2FE300B03BE2 /* main.swift */; };
+		4EC543291EAD316000B03BE2 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC543281EAD316000B03BE2 /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +24,7 @@
 
 /* Begin PBXFileReference section */
 		4EC5431E1EAD2FE300B03BE2 /* SPActive */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SPActive; sourceTree = BUILT_PRODUCTS_DIR; };
-		4EC543211EAD2FE300B03BE2 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		4EC543281EAD316000B03BE2 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +41,7 @@
 		4EC543151EAD2FE300B03BE2 = {
 			isa = PBXGroup;
 			children = (
-				4EC543201EAD2FE300B03BE2 /* SPActive */,
+				4EC543281EAD316000B03BE2 /* main.swift */,
 				4EC5431F1EAD2FE300B03BE2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,14 +52,6 @@
 				4EC5431E1EAD2FE300B03BE2 /* SPActive */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		4EC543201EAD2FE300B03BE2 /* SPActive */ = {
-			isa = PBXGroup;
-			children = (
-				4EC543211EAD2FE300B03BE2 /* main.swift */,
-			);
-			path = SPActive;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,6 +87,7 @@
 					4EC5431D1EAD2FE300B03BE2 = {
 						CreatedOnToolsVersion = 8.3.1;
 						DevelopmentTeam = 6K9L8GL4MH;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -121,7 +114,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EC543221EAD2FE300B03BE2 /* main.swift in Sources */,
+				4EC543291EAD316000B03BE2 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,8 +214,11 @@
 		4EC543261EAD2FE300B03BE2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 6K9L8GL4MH;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -230,7 +226,9 @@
 		4EC543271EAD2FE300B03BE2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 6K9L8GL4MH;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -255,6 +253,7 @@
 				4EC543271EAD2FE300B03BE2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
